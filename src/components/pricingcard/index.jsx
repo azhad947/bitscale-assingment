@@ -64,8 +64,8 @@ const PricingCard = ({
           <div
             style={{
               height: "fitContent",
-              gap: "6.16px",
-              width: "212px",
+
+              width: "232px",
               display: "flex",
               flexDirection: "column",
             }}
@@ -75,22 +75,33 @@ const PricingCard = ({
               // Pricing display for specific indexes
               <div
                 style={{
-                  height: "37px",
                   display: "flex",
                   flexDirection: "column",
-                  fontFamily: "inter",
-                  fontWeight: "800",
-                  fontSize: "36.99px",
-                  lineHeight: "36.99px",
-                  color: "#111928",
+                  gap: "8px",
                 }}
               >
-                {price}
+                <div
+                  style={{
+                    height: "37px",
+                    fontFamily: "inter",
+                    gap: "8px",
+                    fontWeight: "800",
+                    fontSize: "36.99px",
+                    lineHeight: "36.99px",
+                    color: isPrimary ? "#ffffff" : "#111928",
+                  }}
+                >
+                  {price}
+                  <span style={{ fontSize: "14px", fontWeight: "normal" }}>
+                    {" "}
+                  </span>
+                </div>
                 <span
                   style={{
+                    fontSize: "12.49px",
                     fontFamily: "inter",
                     fontWeight: "400",
-                    fontSize: "12.33px",
+
                     lineHeight: "18.49px",
                     color: isPrimary ? "#affffff" : "#6B7280",
                   }}
@@ -102,35 +113,69 @@ const PricingCard = ({
               // Alternative pricing display
               <div
                 style={{
-                  height: "37px",
-                  fontFamily: "inter",
-                  fontWeight: "800",
-                  fontSize: "36.99px",
-                  lineHeight: "36.99px",
-                  color: isPrimary ? "#ffffff" : "#111928",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
                 }}
               >
-                {price}
-                <span style={{ fontSize: "14px", fontWeight: "normal" }}>
-                  {" "}
-                  /month
-                </span>
-                <span
+                <div
                   style={{
-                    fontSize: "18.49px",
+                    height: "37px",
                     fontFamily: "inter",
-                    fontWeight: "400",
-                    lineHeight: "18.49px",
-                    color: isPrimary ? "#affffff" : "#6B7280",
+                    gap: "8px",
+                    fontWeight: "800",
+                    fontSize: "36.99px",
+                    lineHeight: "36.99px",
+                    color: isPrimary ? "#ffffff" : "#111928",
                   }}
                 >
-                  {oldPrice}
-                </span>
+                  {price}
+                  <span style={{ fontSize: "14px", fontWeight: "normal" }}>
+                    {" "}
+                    /month
+                  </span>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "10px",
+                  }}
+                >
+                  <span
+                    style={{
+                      backgroundColor: "#ECFDF3",
+                      fontFamily: "lato",
+                      fontWeight: "800",
+                      fontSize: "12.47px",
+                      lineHeight: "14.97px",
+                      color: "#027A48",
+                      display: "flex",
+                      alignItems: "center",
+                      padding:"3.56px 8.91px 3.56px 10.69px",
+                      gap: "3.56px",
+                      borderRadius:"14.25px"
+                    }}
+                  >
+                    ⨸{""}50%{""} off
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "18.49px",
+                      fontFamily: "inter",
+                      fontWeight: "400",
+                      textDecorationLine: "line-through",
+                      lineHeight: "18.49px",
+                      color: isPrimary ? "#affffff" : "#6B7280",
+                    }}
+                  >
+                    {oldPrice}
+                  </span>
+                </div>
               </div>
             )}
           </div>
         </div>
-        
+
         {/* Features list section */}
         <div
           style={{
@@ -180,8 +225,10 @@ const PricingCard = ({
                     style={{
                       width: "15.36px",
                       height: "15.36px",
-                      color:"white",
-                      filter: isPrimary ?  'invert(100%) sepia(0%) saturate(0%)  brightness(100%)'   : 'invert(0%) sepia(0%) saturate(0%)  brightness(50%)'
+                      color: "white",
+                      filter: isPrimary
+                        ? "invert(100%) sepia(0%) saturate(0%)  brightness(100%)"
+                        : "invert(0%) sepia(0%) saturate(0%)  brightness(50%)",
                     }}
                     src="/check-circle.png"
                   />
@@ -191,7 +238,7 @@ const PricingCard = ({
             ))}
           </ul>
         </div>
-        
+
         {/* Divider */}
         <div
           style={{
@@ -200,7 +247,7 @@ const PricingCard = ({
             border: "1px solid #76A9FA",
           }}
         ></div>
-        
+
         {/* Extra features section */}
         <div
           style={{
@@ -252,7 +299,7 @@ const PricingCard = ({
             ))}
           </ul>
         </div>
-        
+
         {/* Button container */}
         <div
           style={{
