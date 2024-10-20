@@ -156,7 +156,7 @@ const PricingCard = ({
                       borderRadius:"14.25px"
                     }}
                   >
-                    ⨸{""}50%{""} off
+                    <img style={{filter: 'invert(58%) sepia(93%) saturate(684%) hue-rotate(86deg) brightness(94%) contrast(91%)'}} src="/discount.png" />{""}50%{""} off
                   </span>
                   <span
                     style={{
