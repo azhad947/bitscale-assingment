@@ -178,8 +178,10 @@ const PricingCard = ({
                 >
                   <img
                     style={{
-                      width: "13.36px",
-                      height: "13.36px",
+                      width: "15.36px",
+                      height: "15.36px",
+                      color:"white",
+                      filter: isPrimary ?  'invert(100%) sepia(0%) saturate(0%)  brightness(100%)'   : 'invert(0%) sepia(0%) saturate(0%)  brightness(50%)'
                     }}
                     src="/check-circle.png"
                   />
