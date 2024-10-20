@@ -1,0 +1,89 @@
+import { text } from "express";
+import React, { useState } from "react";
+
+const PricingCard = ({
+  title,
+  price,
+  oldPrice,
+  features,
+  buttonText,
+  isPrimary,
+  indexy,
+  text,
+}) => {
+  return (
+    <div
+      style={{
+        border: "0.89px solid #E5E7EB",
+        borderRadius: "7.13px",
+        padding: "20px",
+        width: "280px",
+        height: "812.77px",
+        backgroundColor: isPrimary ? "#1a5aff" : "#ffffff",
+        color: isPrimary ? "white" : "black",
+        boxShadow:"0 1.78px 3.56px -1.78px rgba(0, 0, 0, 0.05), 0 3.56px 5.35px -0.89px rgba(0, 0, 0, 0.1)",
+      }}
+    >
+      <div
+        style={{
+          width: "232px",
+          height: "764.77px",
+          gap: "24.94px",
+        }}
+      >
+        <div style={{ width: "232px", height: "fitContent", gap: "14.25px" }}>
+          <h3
+            style={{
+              fontWeight: "500",
+              height: "27px",
+              font: "inter",
+              fontSize: "17.82px",
+              lineHeight: "26.73px",
+              color: "#1F2A37",
+            }}
+          >
+            {title}
+          </h3>
+          <div style={{height:'fitContent',gap:'6.16px'}}>
+          {indexy === 0 || index === 3 ? price : oldPrice}
+          
+          {oldPrice && (
+            <span
+              style={{
+                textDecoration: "line-through",
+                fontSize: "16px",
+                color: isPrimary ? "#a0a0ff" : "#a0a0a0",
+              }}
+            >
+              {oldPrice}
+            </span>
+          )}
+          <span style={{ fontSize: "14px", fontWeight: "normal" }}>/month</span>
+         </div>
+        </div>
+        <ul style={{ listStyle: "none", padding: 0, marginBottom: "20px" }}>
+          {features.map((feature, index) => (
+            <li key={index} style={{ marginBottom: "10px" }}>
+              <span style={{ marginRight: "5px" }}>•</span> {feature}
+            </li>
+          ))}
+        </ul>
+        <button
+          style={{
+            width: "100%",
+            padding: "10px",
+            border: "none",
+            borderRadius: "5px",
+            backgroundColor: isPrimary ? "white" : "#1a5aff",
+            color: isPrimary ? "#1a5aff" : "white",
+            cursor: "pointer",
+          }}
+        >
+          {buttonText}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PricingCard;

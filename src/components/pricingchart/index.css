@@ -1,0 +1,10 @@
+.chart{
+    display: flex;
+    width:fit-content;
+    height: fit-content;
+    padding: 0px 0px 24px 0px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}

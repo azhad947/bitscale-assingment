@@ -1,0 +1,18 @@
+body{
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+
+
+
+
+
+
+
+:root {
+  --blue-100: #E1EFFE;
+}
