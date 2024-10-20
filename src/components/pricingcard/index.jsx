@@ -50,11 +50,11 @@ const PricingCard = ({
           {/* Card title */}
           <h3
             style={{
-              fontWeight: "500",
+              fontWeight: "800",
               height: "27px",
               font: "inter",
-              fontSize: "17.82px",
-              lineHeight: "26.73px",
+              fontSize: "20.82px",
+              lineHeight: "27.73px",
               color: isPrimary ? "#ffffff" : "#1F2A37",
             }}
           >

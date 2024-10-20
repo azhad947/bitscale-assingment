@@ -13,7 +13,7 @@ const App = () => {
           <span >Annual</span>
         </div>
       </div>
-      <div className="a-bottom">
+      <div  className="a-bottom">
       <PricingChart />
       </div>
     </div>
